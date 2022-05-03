@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kaitlyn Dean Validateur de Carte</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147287768-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-147287768-1');
+    </script>
+
+    <!-- css links and bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+</head>
+
+<body style="height:100vh;">
+    <!-- navigation bar -->
+    <nav class="my-navbar navbar-dark navbar fixed-top navbar-expand-lg p-0">
+
+        <!--Brand-->
+        <a href="indexfr.html" class="navbar-brand pl-2">Kaitlyn Dean</a>
+
+        <button class="navbar-toggler" type="button" data-trigger="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="main_nav">
+            <div class="offcanvas-header mt-3">
+                <button class="btn btn-outline-danger btn-close float-right"> &times Close </button>
+                <h4 class="py-2 text-white"></h4>
+                <h4 class="py-2 text-white"></h4>
+            </div>
+            <!--Start buttons on the right-->
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item navbar-active dropdown" style="padding:8px">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Langue</a>
+        	          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                               <a class="dropdown-item" href="cardValid.html">English</a>
+                               <a class="dropdown-item" href="cardValidfr.html">French</a>
+                          </div>
+                </li>
+
+                <li class="nav-item navbar-active" style="padding:8px">
+                    <a class="nav-link" href="resumefr.html">Curriculum Vitae</a>
+                </li>
+                <li class="nav-item navbar-active" style="padding:8px">
+                    <a class="nav-link" href="projectsfr.html">Projets</a>
+                </li>
+                <li class="nav-item navbar-active" style="padding:8px">
+                    <a class="nav-link" href="contactfr.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        $("[data-trigger]").on("click", function () {
+            var trigger_id = $(this).attr('data-trigger');
+            $(trigger_id).toggleClass("show");
+            $('body').toggleClass("offcanvas-active");
+        });
+
+        // close button 
+        $(".btn-close").click(function (e) {
+            $(".navbar-collapse").removeClass("show");
+            $("body").removeClass("offcanvas-active");
+        }); 
+    </script>
+
+    <!-- content -->
+
+    <!-- Header -->
+    <header class="my-salmon-bg py-5 mb-5">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-12">
+                    <h1 class="display-4 mt-5 mb-2" style="color: my-blue;">Validateur de Carte de Crédit/Débit</h1>
+                    <p class="lead mb-5" style="color: my-blue;">C'est un projet en Javascript pour pratiquer l'intégration dans des sites Web.
+			Cela obtient l'entrée de la zone de texte et utilise l'algorithme de Luhn pour vérifier si l'entrée pourrait être 
+			un numéro de carte de crédit/débit valide.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div style="text-align: center">
+      <h2>Validation JavaScript</h2>
+      <p>Veuillez saisir un exemple de numéro de carte de crédit/débit pour tester s'il s'agit d'un numéro de carte valide :</p>
+      <input id="cardNo">
+      <button type="button" onclick="cardValidation()">soumettre</button>
+      <p id="result"></p>
+      <script>
+         function cardValidation() {
+           
+           let x = document.getElementById("cardNo").value; // get input
+           let text; // used to display result
+           
+           if (isNaN(x)) { // checks for valid input
+             text = "Ce n'est pas un numéro de carte valide";
+           } else {
+             if (checkLuhnAlg(x)) // checks if it is a valid card number
+               text = "C'est un numéro de carte valide";
+             else
+               text = "Ce n'est pas un numéro de carte valide";
+           }
+         
+           document.getElementById("result").innerHTML = text; // displays result
+         }
+         
+         function checkLuhnAlg(cardNo) {
+         
+         	let length = cardNo.length;
+             	    let luhnSum = 0;
+                 let isSecond = false;
+                 
+             if (length == 0) { // if nothing was entered, return that it is not a valid card
+               return false;
+             }
+                 
+                 for (let i = length - 1; i >= 0; i--) {
+          
+                     let d = cardNo[i].charCodeAt() - '0'.charCodeAt(); // get card digit
+          
+                     if (isSecond) { // every other number must be doubled
+                         d *= 2;
+                     }
+          
+                     // this handles digits that become double digits after multiplying
+                     luhnSum += parseInt(d / 10, 10);
+                     luhnSum += d % 10;
+          
+                     isSecond = !isSecond; // every other number gets doubled
+                 }
+                 
+                 return (luhnSum % 10 == 0); // if the sum can be modded by ten and equal zero then it is a valid card number
+         }
+         
+      </script>
+</div>
+</body>
+
+</html>
+
+

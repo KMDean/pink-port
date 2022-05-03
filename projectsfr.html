@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kaitlyn Dean Projets</title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147287768-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-147287768-1');
+    </script>
+    
+    <!-- css links and bootstrap -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-dark" style="height:100vh;">
+        <!-- navigation bar -->
+    <nav class="my-navbar navbar-dark navbar fixed-top navbar-expand-lg p-0">
+
+        <!--Brand-->
+        <a href="indexfr.html" class="navbar-brand pl-2">Kaitlyn Dean</a>
+
+        <button class="navbar-toggler" type="button" data-trigger="#main_nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="main_nav">
+          <div class="offcanvas-header mt-3">  
+            <button class="btn btn-outline-danger btn-close float-right"> &times Close </button>
+            <h4 class="py-2 text-white"></h4>
+            <h4 class="py-2 text-white"></h4>
+          </div>
+            <!--Start buttons on the right-->
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item navbar-active dropdown" style="padding:8px">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Langue</a>
+        	          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                               <a class="dropdown-item" href="projects.html">English</a>
+                               <a class="dropdown-item" href="projectsfr.html">French</a>
+                          </div>
+                </li>
+
+                <li class="nav-item navbar-active" style="padding:8px">
+                    <a class="nav-link" href="resumefr.html">Curriculum Vitae</a>
+                </li>
+                <li class="nav-item navbar-active" style="padding:8px">
+                    <a class="nav-link" href="projectsfr.html">Projets</a>
+                </li>
+                <li class="nav-item navbar-active" style="padding:8px">
+                    <a class="nav-link" href="contactfr.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<script>
+    $("[data-trigger]").on("click", function(){
+        var trigger_id =  $(this).attr('data-trigger');
+        $(trigger_id).toggleClass("show");
+        $('body').toggleClass("offcanvas-active");
+    });
+    
+    // close button 
+    $(".btn-close").click(function(e){
+        $(".navbar-collapse").removeClass("show");
+        $("body").removeClass("offcanvas-active");
+    }); 
+</script>
+
+    <main role="main" style="padding-top: 3em;">
+
+      <div class="album py-5 my-salmon-bg">
+        <div class="container">
+
+          <div class="row">
+
+	    <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectCover/cardValidfr.PNG" alt="Card Validator">
+                <div class="card-body">
+                  <p class="card-text">Validateur de Carte de Crédit/Débit</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="cardValidfr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2021</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  
+	    <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectCover/cobol_screen.PNG" alt="Cobol SCREEN">
+                <div class="card-body">
+                  <p class="card-text">Cobol Gestionnaire de Télépaiement</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="cobolfr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2021</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  
+	    <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectCover/set_command.PNG" alt="Métronome">
+                <div class="card-body">
+                  <p class="card-text">Gestionnaire des Ressources</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="resmgrfr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2021</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  
+	    <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectCover/LeftRightScan.PNG" alt="Système Embarqué">
+                <div class="card-body">
+                  <p class="card-text">QNX Système Embarqué</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="qnxfr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2021</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  
+	    <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectCover/lightmode_login.JPG" alt="Plateforme d'Apprentissage en Ligne">
+                <div class="card-body">
+                  <p class="card-text">Plateforme d'Apprentissage en Ligne</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="angularfr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2021</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+	    <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectContent/euler.PNG" alt="Eulers">
+                <div class="card-body">
+                  <p class="card-text">Systèmes de Premier Ordre</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="numericalfr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2021</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  
+	    <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectCover/dashboard_view.png" alt="Tableau de Bord">
+                <div class="card-body">
+                  <p class="card-text">Arduino Node-RED</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="noderedfr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2020</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectCover/normal_reading.jpg" alt="Arduino">
+                <div class="card-body">
+                  <p class="card-text">Arduino Injecteur de Température</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="arduinofr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2020</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectCover/CompilerCover.PNG" alt="Compilateur">
+                <div class="card-body">
+                  <p class="card-text">PLATYPUS Compilateur en C</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="compilerfr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2020</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  
+	   <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectCover/ParallelPorts.PNG" alt="Assembly">
+                <div class="card-body">
+                  <p class="card-text">Calculateur de Note en Assembly</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="gradecalculatorfr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2020</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  
+	    <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectCover/CarDB.PNG" alt="Base de Données de Voitures">
+                <div class="card-body">
+                  <p class="card-text">Base de Données de Voitures</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="javadatabasefr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2020</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+	    <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectContent/datastruct.PNG" alt="Data Structures">
+                <div class="card-body">
+                  <p class="card-text">Structures de Données</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="datastructfr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2019</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectCover/Capture.PNG" alt="Dissecteur de Paquets">
+                <div class="card-body">
+                  <p class="card-text">Wireshark Dissecteur de Paquets</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="logdissectorfr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2019</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectCover/subnetcalculator.PNG" alt="Sous-Réseau Calculateur">
+                <div class="card-body">
+                  <p class="card-text">Calculateur de Sous-Réseau en Java</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="subnetcalcfr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2019</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="padding:10px; height:175px" src="./assets/projectCover/ERD_png.png" alt="Base de Données du Réseau de Bus">
+                <div class="card-body">
+                  <p class="card-text">Base de Données du Réseau de Bus</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+		      <a class="btn btn-sm btn-outline-secondary" href="busdatabasefr.html">Afficher</a>
+                    </div>
+                    <small class="text-muted">2018</small>
+                  </div>
+                </div>
+              </div>
+            </div>	  
+		  
+<!-- 
+============================================================================================================================================
+This is where more squares will go. 
+============================================================================================================================================
+-->
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+  </body>
+</html>
